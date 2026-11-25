@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12 Hindi Compulsory - Complete Guide</title>
+<style>
+:root{--bg:#0b1020;--card:#141d31;--text:#f0f4ff;--muted:#a9b7d0;--green:#43f5a0;--blue:#70b7ff;--border:#293650}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Noto Sans Devanagari",sans-serif;line-height:1.7}
+header{padding:25px 17px;background:linear-gradient(135deg,#112d39,#19214a);border-bottom:1px solid var(--border)}
+header h1{font-size:25px;line-height:1.4;margin:0 0 8px}
+header p{color:var(--muted);margin:0}
+.wrap{max-width:900px;margin:auto;padding:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}
+.stat,.card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px}
+.stat strong{display:block;color:var(--green);font-size:21px}
+.stat span{font-size:12px;color:var(--muted)}
+nav{display:flex;gap:8px;overflow:auto;padding:8px 0 14px}
+nav button{white-space:nowrap}
+button{background:#20344a;color:var(--text);border:1px solid #3b506e;border-radius:9px;padding:10px 13px;font-size:14px;cursor:pointer}
+button.active,.primary{background:var(--green);color:#07140d;border-color:var(--green);font-weight:bold}
+section{display:none}
+section.active{display:block}
+h2{font-size:21px;color:var(--green);margin-top:8px}
+h3{font-size:17px;color:var(--blue);margin-bottom:6px}
+p,li{font-size:15px}
+.muted{color:var(--muted)}
+.note{background:#172b35;border-left:4px solid var(--green);padding:12px;border-radius:7px;margin:12px 0}
+.warn{background:#302719;border-left:4px solid #ffc45c;padding:12px;border-radius:7px;margin:12px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input[type=text],textarea,select{width:100%;padding:11px;border-radius:8px;background:#0c1525;color:white;border:1px solid #3a4b66;font:inherit}
+textarea{min-height:100px}
+label.check{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--border)}
+input[type=checkbox]{margin-top:7px;accent-color:var(--green);width:18px;height:18px}
+.q{padding:12px 0;border-bottom:1px solid var(--border)}
+.q label{display:block;padding:5px}
+.result{font-weight:bold;margin-top:12px}
+.progress{height:8px;background:#263149;border-radius:8px;overflow:hidden}
+#bar{height:100%;width:0;background:var(--green)}
+footer{text-align:center;color:var(--muted);padding:25px 10px;font-size:12px}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.stats{gap:6px}.stat{padding:10px}.stat strong{font-size:18px}header h1{font-size:22px}}
+@media print{body{background:white;color:black}.card{background:white;color:black;border:1px solid #aaa}nav,button{display:none!important}section{display:block!important}.muted{color:#444}}
+</style>
+</head>
+<body>
+<header>
+<h1>कक्षा 12 — हिंदी अनिवार्य</h1>
+<p>RBSE | अर्धवार्षिक परीक्षा | Complete Study Guide</p>
+<p>समझो • याद करो • अभ्यास करो • अपना टेस्ट दो</p>
+</header>
+
+<div class="wrap">
+<div class="stats">
+<div class="stat"><strong id="done">0</strong><span>टॉपिक पूरे</span></div>
+<div class="stat"><strong id="percent">0%</strong><span>तैयारी</span></div>
+<div class="stat"><strong>80</strong><span>बोर्ड पैटर्न के सैद्धांतिक अंक*</span></div>
+</div>
+<div class="progress"><div id="bar"></div></div>
+
+<div class="warn">
+<b>ध्यान दें:</b> अर्धवार्षिक परीक्षा का पाठ्यक्रम स्कूल के अनुसार अलग हो सकता है। अपने शिक्षक द्वारा दिए गए अध्यायों को प्राथमिकता दें। नीचे दिया गया अभ्यास मार्गदर्शक है, प्रश्न आने की गारंटी नहीं।
+</div>
+
+<nav>
+<button class="active" onclick="show('home',this)">होम</button>
+<button onclick="show('plan',this)">क्रैश प्लान</button>
+<button onclick="show('syllabus',this)">अध्याय</button>
+<button onclick="show('grammar',this)">व्याकरण</button>
+<button onclick="show('writing',this)">लेखन</button>
+<button onclick="show('reading',this)">अपठित बोध</button>
+<button onclick="show('quiz',this)">MCQ टेस्ट</button>
+<button onclick="show('test',this)">अंतिम टेस्ट</button>
+<button onclick="show('notes',this)">मेरे नोट्स</button>
+</nav>
+
+<section id="home" class="active">
+<div class="card">
+<h2>तैयारी कैसे करनी है?</h2>
+<ol>
+<li>पहले स्कूल की अर्धवार्षिक अध्याय सूची देखो।</li>
+<li>हर निर्धारित पाठ का सारांश, लेखक/कवि और मुख्य संदेश पढ़ो।</li>
+<li>व्याकरण के नियम उदाहरण सहित याद करो।</li>
+<li>पत्र, निबंध और अपठित गद्यांश लिखकर अभ्यास करो।</li>
+<li>अंत में MCQ और अंतिम टेस्ट हल करो।</li>
+</ol>
+<div class="note"><b>परीक्षा में उत्तर लिखने का नियम:</b> प्रश्न के अनुसार सीधा उत्तर, स्पष्ट भाषा, सही वर्तनी और साफ-सुथरा लेखन रखो। लंबे उत्तर में भूमिका, मुख्य विवरण और निष्कर्ष लिखो।</div>
+<h3>अध्ययन चेकलिस्ट</h3>
+<div id="quickChecks"></div>
+</div>
+</section>
+
+<section id="plan">
+<div class="card">
+<h2>एक दिन का क्रैश प्लान</h2>
+<p class="muted">समय अपनी सुविधा से बदल सकते हो।</p>
+<div id="planChecks"></div>
+<h3>आखिरी 30 मिनट</h3>
+<ul>
+<li>लेखक-कवि और पाठों के मुख्य संदेश दोहराओ।</li>
+<li>पत्र और निबंध का प्रारूप याद करो।</li>
+<li>व्याकरण के नियम और उदाहरण देखो।</li>
+<li>नई चीजें शुरू करने के बजाय पढ़े हुए भाग दोहराओ।</li>
+</ul>
+</div>
+</section>
+
+<section id="syllabus">
+<div class="card">
+<h2>पाठ्यपुस्तक की तैयारी</h2>
+<div class="warn">नीचे सामान्य NCERT/RBSE पाठों की पहचान सूची है। अपने वर्तमान संस्करण और स्कूल की सूची से मिलान करो। सूची में किसी पाठ का होना यह नहीं बताता कि वह अर्धवार्षिक परीक्षा में जरूर आएगा।</div>
+<h3>आरोह भाग 2 — गद्य खंड</h3>
+<div id="prose"></div>
+<h3>आरोह भाग 2 — काव्य खंड</h3>
+<div id="poetry"></div>
+<h3>वितान भाग 2</h3>
+<div id="vitan"></div>
+<h3>हर पाठ के लिए क्या याद करें?</h3>
+<ul>
+<li>लेखक/कवि का नाम और साहित्यिक परिचय।</li>
+<li>पाठ या कविता का केंद्रीय भाव।</li>
+<li>मुख्य घटनाएँ, पात्र और संदेश।</li>
+<li>शब्दार्थ और संदर्भ सहित व्याख्या।</li>
+<li>लघु एवं दीर्घ उत्तरीय प्रश्न।</li>
+</ul>
+<div class="note">किसी पाठ को पूरा मानने से पहले उसका सारांश पढ़ो और बिना देखे पाँच मुख्य बातें बोलकर सुनाओ।</div>
+</div>
+</section>
+
+<section id="grammar">
+<div class="card">
+<h2>व्यावहारिक व्याकरण</h2>
+<h3>1. संधि</h3>
+<p>दो वर्णों के मेल से होने वाले ध्वनि-परिवर्तन को संधि कहते हैं।</p>
+<ul>
+<li><b>स्वर संधि:</b> विद्या + आलय = विद्यालय।</li>
+<li><b>व्यंजन संधि:</b> सत् + जन = सज्जन।</li>
+<li><b>विसर्ग संधि:</b> मनः + योग = मनोयोग।</li>
+</ul>
+<p class="muted">उदाहरणों को नियम सहित समझो; हर संधि का रूप संदर्भ पर निर्भर हो सकता है।</p>
+
+<h3>2. समास</h3>
+<p>दो या अधिक शब्दों को मिलाकर संक्षिप्त शब्द बनाने की प्रक्रिया समास कहलाती है।</p>
+<ul>
+<li><b>अव्ययीभाव:</b> यथाशक्ति — शक्ति के अनुसार।</li>
+<li><b>तत्पुरुष:</b> राजपुत्र — राजा का पुत्र।</li>
+<li><b>कर्मधारय:</b> नीलकमल — नीला कमल।</li>
+<li><b>द्वंद्व:</b> माता-पिता — माता और पिता।</li>
+<li><b>द्विगु:</b> त्रिलोकी — तीन लोकों का समूह।</li>
+<li><b>बहुव्रीहि:</b> दशानन — दस मुख हैं जिसके (रावण)।</li>
+</ul>
+
+<h3>3. उपसर्ग और प्रत्यय</h3>
+<p><b>उपसर्ग:</b> शब्द के पहले जुड़कर अर्थ बदलता है। उदाहरण: प्र + गति = प्रगति।</p>
+<p><b>प्रत्यय:</b> शब्द के अंत में जुड़ता है। उदाहरण: सुंदर + ता = सुंदरता।</p>
+
+<h3>4. मुहावरा और लोकोक्ति</h3>
+<p><b>मुहावरा:</b> विशेष अर्थ देने वाला प्रचलित वाक्यांश।</p>
+<ul>
+<li>नाक कटना — अपमान होना।</li>
+<li>दाँत खट्टे करना — बुरी तरह परास्त करना।</li>
+<li>आँखों का तारा — बहुत प्रिय व्यक्ति।</li>
+<li>हाथ-पाँव फूलना — घबरा जाना।</li>
+</ul>
+<p><b>लोकोक्ति:</b> अनुभव पर आधारित प्रचलित कथन। जैसे — जहाँ चाह, वहाँ राह।</p>
+
+<h3>5. अलंकार</h3>
+<ul>
+<li><b>उपमा:</b> तुलना में सा, सी, समान आदि — उसका मुख चाँद-सा है।</li>
+<li><b>रूपक:</b> उपमेय को सीधे उपमान बताना — जीवन एक यात्रा है।</li>
+<li><b>अनुप्रास:</b> एक जैसी वर्ण-ध्वनि की आवृत्ति — चंचल चितवन चुरा गई।</li>
+<li><b>मानवीकरण:</b> प्रकृति या वस्तु को मानवीय गुण देना — हवा गुनगुना रही है।</li>
+<li><b>अतिशयोक्ति:</b> बात को बढ़ा-चढ़ाकर कहना।</li>
+</ul>
+
+<h3>6. वाक्य शुद्धि</h3>
+<ul>
+<li>लिंग, वचन और क्रिया का मेल सही रखो।</li>
+<li>कर्ता के अनुसार क्रिया का प्रयोग करो।</li>
+<li>अनावश्यक शब्द हटाओ।</li>
+<li>विराम चिह्न और वर्तनी की जाँच करो।</li>
+</ul>
+<div class="note">परीक्षा में वही व्याकरण विषय प्राथमिकता से पढ़ो जो तुम्हारे निर्धारित पाठ्यक्रम में दिए गए हैं।</div>
+</div>
+</section>
+
+<section id="writing">
+<div class="card">
+<h2>लेखन कौशल</h2>
+<h3>1. औपचारिक पत्र</h3>
+<div class="note">
+प्रेषक का पता<br>
+दिनांक<br>
+सेवा में,<br>
+प्राप्तकर्ता का पद और पता<br>
+<b>विषय:</b> पत्र का उद्देश्य<br>
+महोदय/महोदया,<br>
+पत्र का मुख्य विवरण — समस्या, कारण और अनुरोध।<br>
+धन्यवाद।<br>
+भवदीय/भवदीया<br>
+नाम
+</div>
+<p><b>अभ्यास:</b> अपने क्षेत्र में सफाई की समस्या के समाधान हेतु नगर पालिका अधिकारी को पत्र लिखो।</p>
+
+<h3>2. निबंध लेखन</h3>
+<p>निबंध में विषय का परिचय, मुख्य विचार, उदाहरण/समस्याएँ, समाधान और निष्कर्ष रखो। शब्द सीमा प्रश्न में दी गई हो तो उसका पालन करो।</p>
+<ul>
+<li>पर्यावरण संरक्षण</li>
+<li>विद्यार्थी जीवन में अनुशासन</li>
+<li>जल संरक्षण</li>
+<li>सोशल मीडिया: लाभ और हानि</li>
+<li>शिक्षा का महत्त्व</li>
+</ul>
+<h3>निबंध की नमूना रूपरेखा: जल संरक्षण</h3>
+<p><b>भूमिका:</b> जल जीवन का आधार है।</p>
+<p><b>समस्या:</b> जल का अनावश्यक उपयोग, भूजल में कमी और प्रदूषण।</p>
+<p><b>समाधान:</b> वर्षा जल संचयन, जल का पुनः उपयोग, रिसाव रोकना और जागरूकता।</p>
+<p><b>निष्कर्ष:</b> जल बचाना प्रत्येक नागरिक की जिम्मेदारी है।</p>
+
+<h3>3. सूचना लेखन</h3>
+<p>संस्था/विद्यालय का नाम, सूचना, दिनांक, विषय, आवश्यक विवरण, हस्ताक्षर और पद। भाषा संक्षिप्त और स्पष्ट हो।</p>
+<h3>4. विज्ञापन लेखन</h3>
+<p>आकर्षक शीर्षक, उत्पाद/कार्यक्रम का नाम, मुख्य विशेषताएँ और आवश्यक संपर्क विवरण लिखो। काल्पनिक संपर्क जानकारी को वास्तविक बताकर न लिखो।</p>
+<h3>5. संवाद लेखन</h3>
+<p>दो व्यक्तियों की बातचीत को स्वाभाविक, विषय-केंद्रित और छोटे वाक्यों में लिखो।</p>
+<h3>6. सार लेखन</h3>
+<p>मूल अनुच्छेद का मुख्य विचार अपने शब्दों में संक्षेप में लिखो। उदाहरण और दोहराव हटाओ, मूल अर्थ न बदलो।</p>
+<div class="warn">लेखन के सभी प्रारूप अपने स्कूल में पढ़ाए गए प्रारूप और प्रश्नपत्र के निर्देशों के अनुसार तैयार करो।</div>
+</div>
+</section>
+
+<section id="reading">
+<div class="card">
+<h2>अपठित गद्यांश और काव्यांश</h2>
+<ol>
+<li>पहले पूरा गद्यांश ध्यान से पढ़ो।</li>
+<li>प्रश्न में माँगी गई जानकारी ढूँढ़ो।</li>
+<li>उत्तर अपने शब्दों में, लेकिन गद्यांश के अर्थ के अनुसार लिखो।</li>
+<li>शीर्षक छोटा और मुख्य विचार से जुड़ा रखो।</li>
+<li>काव्यांश में भाव, संदेश और प्रयुक्त शब्दों के संदर्भ को समझो।</li>
+</ol>
+<h3>अभ्यास गद्यांश</h3>
+<p>समय मनुष्य के जीवन की अमूल्य संपत्ति है। जो विद्यार्थी समय का सही उपयोग करता है, वह अपने कार्य व्यवस्थित ढंग से पूरा कर सकता है। नियमित अध्ययन, पर्याप्त विश्राम और अभ्यास से आत्मविश्वास बढ़ता है। केवल योजना बनाना पर्याप्त नहीं; उस पर लगातार काम करना भी आवश्यक है।</p>
+<h3>प्रश्न</h3>
+<p>1. समय को अमूल्य संपत्ति क्यों कहा गया है?</p>
+<textarea id="r1" placeholder="अपना उत्तर लिखो..."></textarea>
+<p>2. आत्मविश्वास बढ़ाने में कौन-सी बातें सहायक हैं?</p>
+<textarea id="r2" placeholder="अपना उत्तर लिखो..."></textarea>
+<p>3. गद्यांश का उपयुक्त शीर्षक लिखो।</p>
+<input id="r3" type="text" placeholder="शीर्षक">
+<button class="primary" onclick="alert('उत्तर जाँचो: 1. समय का सही उपयोग जीवन में कार्य व्यवस्थित करता है। 2. नियमित अध्ययन, विश्राम और अभ्यास। 3. समय का सदुपयोग।')">उत्तर-कुंजी दिखाएँ</button>
+</div>
+</section>
+
+<section id="quiz">
+<div class="card">
+<h2>MCQ अभ्यास टेस्ट</h2>
+<p class="muted">हर प्रश्न में एक सही विकल्प चुनो।</p>
+<div id="quizArea"></div>
+<button class="primary" onclick="gradeQuiz()">उत्तर जाँचें</button>
+<button onclick="resetQuiz()">फिर से प्रयास करो</button>
+<div id="quizResult" class="result"></div>
+</div>
+</section>
+
+<section id="test">
+<div class="card">
+<h2>अंतिम स्व-मूल्यांकन</h2>
+<p>नीचे दिए प्रश्नों के उत्तर कॉपी में लिखो। पहले स्वयं प्रयास करो।</p>
+<ol>
+<li>अपने निर्धारित पाठ्यक्रम के किसी एक गद्य पाठ का केंद्रीय भाव लिखो।</li>
+<li>किसी एक कविता का मुख्य संदेश समझाओ।</li>
+<li>एक औपचारिक पत्र लिखो।</li>
+<li>जल संरक्षण पर निबंध की रूपरेखा बनाओ।</li>
+<li>संधि और समास में अंतर उदाहरण सहित बताओ।</li>
+<li>किसी पाठ के लेखक/कवि का संक्षिप्त परिचय लिखो।</li>
+<li>एक अपठित गद्यांश हल करो।</li>
+<li>अपने स्कूल के निर्धारित पाठों के पाँच लघु उत्तरीय प्रश्न हल करो।</li>
+</ol>
+<h3>अपना स्कोर लिखो</h3>
+<input type="text" id="score" placeholder="जैसे: 8 में से 6 प्रश्न सही">
+<button onclick="saveScore()">स्कोर सेव करो</button>
+<p id="scoreMsg" class="muted"></p>
+</div>
+</section>
+
+<section id="notes">
+<div class="card">
+<h2>मेरे व्यक्तिगत नोट्स</h2>
+<p>यहाँ कठिन प्रश्न, लेखक-कवि या याद रखने वाली बातें लिखो।</p>
+<textarea id="myNotes" placeholder="अपने नोट्स यहाँ लिखें..."></textarea>
+<button class="primary" onclick="saveNotes()">नोट्स सेव करें</button>
+<button onclick="downloadNotes()">नोट्स TXT में डाउनलोड करें</button>
+<button onclick="window.print()">प्रिंट / PDF सेव</button>
+<p id="noteMsg" class="muted"></p>
+</div>
+</section>
+
+</div>
+<footer>
+RBSE कक्षा 12 हिंदी अनिवार्य • व्यक्तिगत अभ्यास गाइड<br>
+*अंक-विभाजन बोर्ड के पूरे सैद्धांतिक पेपर के संदर्भ में है; अर्धवार्षिक पेपर अलग हो सकता है।
+</footer>
+
+<script>
+const prose=[
+"भक्तिन","बाजार दर्शन","काले मेघा पानी दे","पहलवान की ढोलक",
+"चार्ली चैप्लिन यानी हम सब","नमक","शिरीष के फूल",
+"श्रम विभाजन और जाति प्रथा","मेरी कल्पना का आदर्श समाज"
+];
+const poetry=[
+"आत्मपरिचय","एक गीत","पतंग","कविता के बहाने",
+"बात सीधी थी पर","कैमरे में बंद अपाहिज","सहर्ष स्वीकारा है",
+"उषा","बादल राग","कवितावली","लक्ष्मण-मूर्छा और राम का विलाप",
+"रुबाइयाँ","छोटा मेरा खेत","बगुलों के पंख"
+];
+const vitan=["सिल्वर वैडिंग","जूझ","अतीत में दबे पाँव","डायरी के पन्ने"];
+const tasks=[
+"स्कूल की अध्याय सूची से पाठ मिलाना",
+"निर्धारित गद्य पाठों के सारांश",
+"निर्धारित कविताओं के भाव और व्याख्या",
+"वितान के निर्धारित अध्याय",
+"व्याकरण के नियम और उदाहरण",
+"पत्र और निबंध का अभ्यास",
+"अपठित गद्यांश का अभ्यास",
+"MCQ और अंतिम टेस्ट"
+];
+const plan=[
+"पहला सत्र: पाठ्यक्रम और गद्य-पद्य के मुख्य भाव",
+"दूसरा सत्र: लेखक-कवि और महत्त्वपूर्ण प्रश्न",
+"तीसरा सत्र: व्याकरण और उदाहरण",
+"चौथा सत्र: पत्र, निबंध और लेखन प्रारूप",
+"पाँचवाँ सत्र: अपठित बोध",
+"छठा सत्र: MCQ और गलतियों की पुनरावृत्ति"
+];
+function loadChecks(id,arr,prefix){
+const root=document.getElementById(id);
+arr.forEach((t,i)=>{
+const l=document.createElement("label");
+l.className="check";
+l.innerHTML='<input type="checkbox" id="'+prefix+i+'"><span>'+t+'</span>';
+root.appendChild(l);
+l.querySelector("input").checked=localStorage.getItem(prefix+i)==="1";
+l.querySelector("input").addEventListener("change",e=>{
+localStorage.setItem(prefix+i,e.target.checked?"1":"0");
+updateStats();
+});
+});
+}
+function loadChapters(id,arr,prefix){
+const root=document.getElementById(id);
+arr.forEach((t,i)=>{
+const l=document.createElement("label");
+l.className="check";
+l.innerHTML='<input type="checkbox" id="'+prefix+i+'"><span>'+t+'</span>';
+root.appendChild(l);
+l.querySelector("input").checked=localStorage.getItem(prefix+i)==="1";
+l.querySelector("input").addEventListener("change",e=>{
+localStorage.setItem(prefix+i,e.target.checked?"1":"0");
+updateStats();
+});
+});
+}
+function show(id,btn){
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+window.scrollTo(0,0);
+}
+loadChecks("quickChecks",tasks,"task");
+loadChecks("planChecks",plan,"plan");
+loadChapters("prose",prose,"prose");
+loadChapters("poetry",poetry,"poetry");
+loadChapters("vitan",vitan,"vitan");
+
+function updateStats(){
+const all=[...document.querySelectorAll('input[type=checkbox]')];
+const done=all.filter(x=>x.checked).length;
+const pct=all.length?Math.round(done/all.length*100):0;
+document.getElementById("done").textContent=done;
+document.getElementById("percent").textContent=pct+"%";
+document.getElementById("bar").style.width=pct+"%";
+}
+const questions=[
+{q:"'विद्यालय' का सही संधि-विच्छेद क्या है?",o:["विद्या + आलय","विद्य + आलय","विद्या + लय","विद + यालय"],a:0},
+{q:"'माता-पिता' कौन-सा समास है?",o:["तत्पुरुष","द्वंद्व","बहुव्रीहि","अव्ययीभाव"],a:1},
+{q:"'आँखों का तारा' मुहावरे का अर्थ है?",o:["क्रोधित व्यक्ति","बहुत प्रिय व्यक्ति","डर जाना","बीमार होना"],a:1},
+{q:"उपमा अलंकार में सामान्यतः किसका प्रयोग होता है?",o:["सा, सी, समान","केवल और","क्योंकि","लेकिन"],a:0},
+{q:"निबंध का अच्छा निष्कर्ष कैसा होना चाहिए?",o:["विषय से अलग","बिना अर्थ का","मुख्य विचार का सार","केवल शीर्षक"],a:2},
+{q:"अपठित गद्यांश का उत्तर किस आधार पर होना चाहिए?",o:["अनुमान मात्र","गद्यांश के अर्थ","किसी भी कहानी","केवल याद किए तथ्य"],a:1},
+{q:"प्रत्यय सामान्यतः कहाँ जुड़ता है?",o:["शब्द के अंत में","शब्द से पहले","वाक्य के बाहर","केवल संज्ञा के पहले"],a:0},
+{q:"औपचारिक पत्र में विषय का उद्देश्य क्या है?",o:["पत्र को लंबा करना","पत्र का मुख्य प्रयोजन बताना","हस्ताक्षर हटाना","पता छिपाना"],a:1},
+{q:"'जहाँ चाह, वहाँ राह' क्या है?",o:["संधि","मुहावरा","लोकोक्ति","उपसर्ग"],a:2},
+{q:"कविता की व्याख्या में सबसे जरूरी क्या है?",o:["केवल कठिन शब्द","संदर्भ और भावार्थ","कवि का पता","केवल पंक्तियाँ दोहराना"],a:1}
+];
+function renderQuiz(){
+const root=document.getElementById("quizArea");
+root.innerHTML="";
+questions.forEach((q,i)=>{
+const d=document.createElement("div");d.className="q";
+d.innerHTML="<b>"+(i+1)+". "+q.q+"</b>";
+q.o.forEach((o,j)=>{
+d.innerHTML+='<label><input type="radio" name="q'+i+'" value="'+j+'"> '+o+'</label>';
+});
+root.appendChild(d);
+});
+}
+function gradeQuiz(){
+let score=0,answered=0;
+questions.forEach((q,i)=>{
+const v=document.querySelector('input[name="q'+i+'"]:checked');
+if(v){answered++;if(+v.value===q.a)score++;}
+});
+document.getElementById("quizResult").textContent=
+"स्कोर: "+score+"/"+questions.length+" | उत्तर दिए: "+answered+"/"+questions.length+
+(score>=8?" — बहुत अच्छा!":score>=5?" — गलत उत्तरों को दोहराओ।":" — नियम फिर से पढ़कर अभ्यास करो।");
+}
+function resetQuiz(){
+document.querySelectorAll('#quizArea input').forEach(x=>x.checked=false);
+document.getElementById("quizResult").textContent="";
+}
+function saveNotes(){
+localStorage.setItem("myHindiNotes",document.getElementById("myNotes").value);
+document.getElementById("noteMsg").textContent="नोट्स इस ब्राउज़र में सेव हो गए।";
+}
+function downloadNotes(){
+const content=document.getElementById("myNotes").value;
+const blob=new Blob([content],{type:"text/plain;charset=utf-8"});
+const a=document.createElement("a");
+a.href=URL.createObjectURL(blob);a.download="Hindi_Class12_Notes.txt";a.click();
+URL.revokeObjectURL(a.href);
+}
+function saveScore(){
+localStorage.setItem("hindiScore",document.getElementById("score").value);
+document.getElementById("scoreMsg").textContent="स्कोर सेव हो गया।";
+}
+document.getElementById("myNotes").value=localStorage.getItem("myHindiNotes")||"";
+document.getElementById("score").value=localStorage.getItem("hindiScore")||"";
+renderQuiz();
+updateStats();
+</script>
+</body>
+</html>
